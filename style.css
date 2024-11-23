@@ -1,0 +1,194 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 250px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Bloco de perguntas */
+.question-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Bloco das opções */
+.option-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.option {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    background-color: lightgray;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option.selected {
+    border: 3px solid #000;
+    transform: scale(1.1);
+}
+
+/* Bolinhas coloridas */
+.scale {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.scale-item {
+    text-align: center;
+}
+
+.scale-item .circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Cores das bolinhas */
+.scale-item:nth-child(1) .circle { background-color: #ff0000; }
+.scale-item:nth-child(2) .circle { background-color: #ff3300; }
+.scale-item:nth-child(3) .circle { background-color: #ff6600; }
+.scale-item:nth-child(4) .circle { background-color: #ff9900; }
+.scale-item:nth-child(5) .circle { background-color: #ffcc00; }
+.scale-item:nth-child(6) .circle { background-color: #ffff00; }
+.scale-item:nth-child(7) .circle { background-color: #ccff33; }
+.scale-item:nth-child(8) .circle { background-color: #99ff33; }
+.scale-item:nth-child(9) .circle { background-color: #66ff33; }
+.scale-item:nth-child(10) .circle { background-color: #33cc33; }
+.scale-item:nth-child(11) .circle { background-color: #00cc00; }
+
+/* Efeito ao selecionar */
+.scale-item input[type="radio"] {
+    display: none;
+}
+
+.scale-item input[type="radio"]:checked + .circle {
+    background-color: #000000; /* Cor de fundo ao selecionar */
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Botão de submissão */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Adicionando mais responsividade e centralização */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .scale-item .circle {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
